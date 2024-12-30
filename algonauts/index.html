@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algonauts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>algonauts</h1>
+        <div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="./index.html" class="active">Home</a>
+      <a href="./leaderboard.html">Leaderboard</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./rulebook.html">Rulebook</a>
+      <a href="./calendar.html" >Event Calendar</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+       <div class="slideshow">
+            <div class="slides">
+                <img src="" alt="Slide 1 coming soon">
+                <img src="" alt="Slide 2 coming soon">
+                <img src="" alt="Slide 3 coming soon">
+                <img src="" alt="Slide 4 coming soon">
+            </div>
+        </div>
+
+        <div class="subsection">
+          <h2>Upcoming Contests</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nisi ut neque laoreet, ut tincidunt libero pellentesque.</p>
+        </div>
+
+        <div class="subsection">
+          <h2>Problem of the Day</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nisi ut neque laoreet, ut tincidunt libero pellentesque.</p>
+          <section>
+            <button id="openPopup">Click for Question of the Day</button>
+
+  <!-- Pop-up overlay -->
+  <div id="popupOverlay">
+    <div id="popupContent">
+      <h2 class="qotd_pop">Question of the Day</h2>
+      <p><strong>A. Floor Number</strong></p>
+      <p><strong>Problem Statement:</strong> Vasya wants to visit his classmate Petya, who lives in a large apartment building. Vasya knows the number of Petya's apartment, <code>n</code>. The building has only one entrance, and the apartments are distributed as follows:</p>
+      <ul>
+        <li>The <strong>first floor</strong> contains exactly 2 apartments: apartments 1 and 2.</li>
+        <li>Each subsequent floor contains <code>x</code> apartments.</li>
+      </ul>
+      <p>Apartment numbering starts at <code>1</code> on the first floor and continues sequentially upward.</p>
+
+      <p><strong>Input:</strong></p>
+      <p>The first line contains a single integer <code>t</code> (1 ≤ t ≤ 1000) — the number of test cases. Each of the following <code>t</code> lines contains two integers <code>n</code> and <code>x</code> (1 ≤ n, x ≤ 1000).</p>
+
+      <p><strong>Output:</strong></p>
+      <p>For each test case, output a single integer — the floor number of the apartment <code>n</code>.</p>
+
+      <p><strong>Example:</strong></p>
+      <div class="example">
+        <table>
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                4<br>
+                7 3<br>
+                1 5<br>
+                22 5<br>
+                987 13
+              </td>
+              <td>
+                3<br>
+                1<br>
+                5<br>
+                77
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+          </section>
+        </div>
+    
+
+    </div>
+    
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slides img');
+
+      function showSlide(index) {
+          slides.forEach((slide, i) => {
+              slide.style.display = i === index ? 'block' : 'none';
+          });
+      }
+
+      function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+      }
+
+      showSlide(currentIndex);
+      setInterval(nextSlide, 3000); 
+  </script>
+  <script src="popup.js"></script>
+</body>
+</html>
