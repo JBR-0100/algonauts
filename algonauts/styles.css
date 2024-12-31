@@ -257,7 +257,7 @@ body {
 
 /* popup_question */
 /* Global styles */
-body {
+.popup_qotd {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -359,3 +359,6 @@ table th {
   background-color: #218838;
 }
 /* popup_question */
+
+/* popup_qotd_section */
+/* popup_qotd_section */
