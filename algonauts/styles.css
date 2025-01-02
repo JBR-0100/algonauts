@@ -265,7 +265,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 10vh;
 }
 
 button {
@@ -302,13 +302,15 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 600px;
+  /* max-width: 600px; */
+  width: 60vw;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 20px 40px;
   overflow-y: auto;
   max-height: 80%;
+  
 }
 
 .qotd_pop {
@@ -326,7 +328,7 @@ p, ul {
   margin-top: 20px;
 }
 
-table {
+.qotd_io_table  {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
@@ -361,4 +363,5 @@ table th {
 /* popup_question */
 
 /* popup_qotd_section */
+
 /* popup_qotd_section */
